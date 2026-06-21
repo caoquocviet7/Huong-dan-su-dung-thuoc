@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
@@ -38,137 +39,148 @@
   }
   a{color:var(--teal)}
 
-  /* ---------- Header ---------- */
-  header{
-    position:sticky;top:0;z-index:20;
-    background:rgba(238,242,243,.86);
-    backdrop-filter:saturate(160%) blur(10px);
-    border-bottom:1px solid var(--line);
-  }
-  .wrap{max-width:920px;margin:0 auto;padding:0 18px}
-  .masthead{display:flex;align-items:center;gap:14px;padding:16px 0 12px}
-  .mark{
-    flex:none;width:42px;height:42px;border-radius:11px;
-    background:linear-gradient(150deg,var(--teal),var(--teal-deep));
-    display:grid;place-items:center;color:#fff;box-shadow:var(--shadow);
-  }
-  .mark svg{width:24px;height:24px}
-  .titles h1{font-size:1.06rem;font-weight:800;margin:0;letter-spacing:-.01em}
-  .titles p{margin:1px 0 0;font-size:.78rem;color:var(--muted);font-weight:500}
+/* ––––– Header ––––– */
+header{
+position:sticky;top:0;z-index:20;
+background:rgba(238,242,243,.86);
+backdrop-filter:saturate(160%) blur(10px);
+border-bottom:1px solid var(–line);
+}
+.wrap{max-width:920px;margin:0 auto;padding:0 18px}
+.masthead{display:flex;align-items:center;gap:14px;padding:16px 0 12px}
+.mark{
+flex:none;width:42px;height:42px;border-radius:11px;
+background:linear-gradient(150deg,var(–teal),var(–teal-deep));
+display:grid;place-items:center;color:#fff;box-shadow:var(–shadow);
+}
+.mark svg{width:24px;height:24px}
+.titles h1{font-size:1.06rem;font-weight:800;margin:0;letter-spacing:-.01em}
+.titles p{margin:1px 0 0;font-size:.78rem;color:var(–muted);font-weight:500}
 
-  .searchrow{display:flex;gap:10px;padding-bottom:12px;flex-wrap:wrap}
-  .search{position:relative;flex:1 1 260px}
-  .search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(--muted)}
-  .search input{
-    width:100%;padding:12px 14px 12px 40px;border:1px solid var(--line);
-    border-radius:11px;background:var(--surface);font:inherit;font-size:.95rem;color:var(--ink);
-    box-shadow:var(--shadow);transition:border-color .15s,box-shadow .15s;
-  }
-  .search input:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-soft)}
-  .btn{
-    display:inline-flex;align-items:center;gap:7px;padding:11px 15px;border-radius:11px;
-    border:1px solid var(--line);background:var(--surface);color:var(--ink);
-    font:inherit;font-weight:600;font-size:.9rem;cursor:pointer;box-shadow:var(--shadow);
-    transition:border-color .15s,background .15s;white-space:nowrap;
-  }
-  .btn:hover{border-color:var(--teal)}
-  .btn svg{width:17px;height:17px}
-  .btn.primary{background:var(--teal);color:#fff;border-color:var(--teal)}
-  .btn.primary:hover{background:var(--teal-deep)}
+.searchrow{display:flex;gap:10px;padding-bottom:12px;flex-wrap:wrap}
+.search{position:relative;flex:1 1 260px}
+.search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:18px;height:18px;color:var(–muted)}
+.search input{
+width:100%;padding:12px 14px 12px 40px;border:1px solid var(–line);
+border-radius:11px;background:var(–surface);font:inherit;font-size:.95rem;color:var(–ink);
+box-shadow:var(–shadow);transition:border-color .15s,box-shadow .15s;
+}
+.search input:focus{outline:none;border-color:var(–teal);box-shadow:0 0 0 3px var(–teal-soft)}
+.btn{
+display:inline-flex;align-items:center;gap:7px;padding:11px 15px;border-radius:11px;
+border:1px solid var(–line);background:var(–surface);color:var(–ink);
+font:inherit;font-weight:600;font-size:.9rem;cursor:pointer;box-shadow:var(–shadow);
+transition:border-color .15s,background .15s;white-space:nowrap;
+}
+.btn:hover{border-color:var(–teal)}
+.btn svg{width:17px;height:17px}
+.btn.primary{background:var(–teal);color:#fff;border-color:var(–teal)}
+.btn.primary:hover{background:var(–teal-deep)}
 
-  .filters{display:flex;gap:8px;padding-bottom:14px;flex-wrap:wrap;align-items:center}
-  .chip{
-    padding:7px 13px;border-radius:999px;border:1px solid var(--line);background:var(--surface);
-    font:inherit;font-size:.82rem;font-weight:600;color:var(--slate);cursor:pointer;transition:.15s;
-  }
-  .chip:hover{border-color:var(--teal)}
-  .chip[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
-  .count{margin-left:auto;font-size:.8rem;color:var(--muted);font-weight:500}
+.filters{display:flex;gap:8px;padding-bottom:14px;flex-wrap:wrap;align-items:center}
+.chip{
+padding:7px 13px;border-radius:999px;border:1px solid var(–line);background:var(–surface);
+font:inherit;font-size:.82rem;font-weight:600;color:var(–slate);cursor:pointer;transition:.15s;
+}
+.chip:hover{border-color:var(–teal)}
+.chip[aria-pressed=“true”]{background:var(–ink);color:#fff;border-color:var(–ink)}
+.count{margin-left:auto;font-size:.8rem;color:var(–muted);font-weight:500}
 
-  /* ---------- Main ---------- */
-  main{max-width:920px;margin:0 auto;padding:18px}
-  .status{
-    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
-    padding:34px 24px;text-align:center;box-shadow:var(--shadow);
-  }
-  .status .ic{width:46px;height:46px;margin:0 auto 14px;color:var(--teal)}
-  .status h2{margin:0 0 6px;font-size:1.05rem}
-  .status p{margin:0 auto;max-width:440px;color:var(--muted);font-size:.9rem}
-  .status .btn{margin-top:18px}
-  .drop{border:2px dashed var(--line);border-radius:var(--radius);transition:.15s}
-  .drop.over{border-color:var(--teal);background:var(--teal-soft)}
+/* ––––– Main ––––– */
+main{max-width:920px;margin:0 auto;padding:18px}
+.status{
+background:var(–surface);border:1px solid var(–line);border-radius:var(–radius);
+padding:34px 24px;text-align:center;box-shadow:var(–shadow);
+}
+.status .ic{width:46px;height:46px;margin:0 auto 14px;color:var(–teal)}
+.status h2{margin:0 0 6px;font-size:1.05rem}
+.status p{margin:0 auto;max-width:440px;color:var(–muted);font-size:.9rem}
+.status .btn{margin-top:18px}
+.drop{border:2px dashed var(–line);border-radius:var(–radius);transition:.15s}
+.drop.over{border-color:var(–teal);background:var(–teal-soft)}
 
-  .meta{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}
-  .meta .updated{font-size:.8rem;color:var(--muted)}
-  .meta .updated b{color:var(--ink);font-weight:600}
+.meta{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.meta .updated{font-size:.8rem;color:var(–muted)}
+.meta .updated b{color:var(–ink);font-weight:600}
 
-  .list{display:flex;flex-direction:column;gap:10px}
-  details.card{
-    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
-    box-shadow:var(--shadow);overflow:hidden;
-  }
-  details.card[open]{border-color:#c7d6d8}
-  summary{
-    list-style:none;cursor:pointer;padding:15px 16px;display:flex;gap:12px;align-items:flex-start;
-  }
-  summary::-webkit-details-marker{display:none}
-  .sumtext{flex:1;min-width:0}
-  .name{font-weight:700;font-size:1rem;letter-spacing:-.01em;line-height:1.3}
-  .sub{font-size:.84rem;color:var(--muted);margin-top:3px}
-  .sub .ing{color:var(--teal-deep);font-weight:600}
-  .tagrow{display:flex;gap:6px;align-items:center;margin-top:8px;flex-wrap:wrap}
-  .tag{font-size:.72rem;font-weight:600;padding:3px 9px;border-radius:999px;background:var(--slate-soft);color:var(--slate)}
-  .tag.cat-ks{background:var(--teal-soft);color:var(--teal-deep)}
-  .tag.cat-kn{background:var(--violet-soft);color:var(--violet)}
-  .tag.cat-kv{background:var(--blue-soft);color:var(--blue)}
-  .tag.form{background:transparent;color:var(--muted);border:1px solid var(--line)}
-  .chev{flex:none;width:20px;height:20px;color:var(--muted);margin-top:2px;transition:transform .2s}
-  details[open] .chev{transform:rotate(180deg)}
+.list{display:flex;flex-direction:column;gap:10px}
+details.card{
+background:var(–surface);border:1px solid var(–line);border-radius:var(–radius);
+box-shadow:var(–shadow);overflow:hidden;
+}
+details.card[open]{border-color:#c7d6d8}
+summary{
+list-style:none;cursor:pointer;padding:15px 16px;display:flex;gap:12px;align-items:flex-start;
+}
+summary::-webkit-details-marker{display:none}
+.sumtext{flex:1;min-width:0}
+.name{font-weight:700;font-size:1rem;letter-spacing:-.01em;line-height:1.3}
+.sub{font-size:.84rem;color:var(–muted);margin-top:3px}
+.sub .ing{color:var(–teal-deep);font-weight:600}
+.tagrow{display:flex;gap:6px;align-items:center;margin-top:8px;flex-wrap:wrap}
+.tag{font-size:.72rem;font-weight:600;padding:3px 9px;border-radius:999px;background:var(–slate-soft);color:var(–slate)}
+.tag.cat-ks{background:var(–teal-soft);color:var(–teal-deep)}
+.tag.cat-kn{background:var(–violet-soft);color:var(–violet)}
+.tag.cat-kv{background:var(–blue-soft);color:var(–blue)}
+.tag.form{background:transparent;color:var(–muted);border:1px solid var(–line)}
+.chev{flex:none;width:20px;height:20px;color:var(–muted);margin-top:2px;transition:transform .2s}
+details[open] .chev{transform:rotate(180deg)}
 
-  .body{padding:0 16px 16px;border-top:1px solid var(--line);margin-top:-1px}
-  .block{padding:14px 0;border-bottom:1px dashed var(--line)}
-  .block:last-child{border-bottom:none;padding-bottom:2px}
-  .block h3{
-    margin:0 0 7px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;
-    color:var(--teal);display:flex;align-items:center;gap:7px;
-  }
-  .block.storage h3{color:var(--amber)}
-  .block.note h3{color:var(--slate)}
-  .block h3 svg{width:15px;height:15px}
-  .block .txt{font-size:.92rem;white-space:pre-line;color:#22343b}
-  .block.storage .txt{background:var(--amber-soft);border-radius:9px;padding:11px 13px}
+.body{padding:0 16px 16px;border-top:1px solid var(–line);margin-top:-1px}
+.block{padding:14px 0;border-bottom:1px dashed var(–line)}
+.block:last-child{border-bottom:none;padding-bottom:2px}
+.block h3{
+margin:0 0 7px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;
+color:var(–teal);display:flex;align-items:center;gap:7px;
+}
+.block.storage h3{color:var(–amber)}
+.block.note h3{color:var(–slate)}
+.block h3 svg{width:15px;height:15px}
+.block .txt{font-size:.92rem;white-space:pre-line;color:#22343b}
+.block.storage .txt{background:var(–amber-soft);border-radius:9px;padding:11px 13px}
 
-  mark{background:#fff3bf;color:inherit;border-radius:3px;padding:0 1px}
+/* dosing group (reference data, distinct from live sheet content) */
+.dosegroup{margin:14px 0 4px;border:1px solid #cfe4f3;background:#f6fbfe;border-radius:11px;padding:2px 13px}
+.dosehead{font-weight:700;font-size:.74rem;color:var(–blue);text-transform:uppercase;letter-spacing:.06em;padding:11px 0 4px}
+.dosegroup .block{padding:11px 0;border-bottom:1px dashed #d7e8f4}
+.dosegroup .block:last-of-type{border-bottom:none}
+.dosegroup h4{margin:0 0 6px;font-size:.78rem;font-weight:700;color:var(–blue)}
+.dosegroup .txt{font-size:.9rem;white-space:pre-line;color:#1f3a49}
+.src{font-size:.72rem;color:var(–muted);font-style:italic;padding:10px 0 8px;line-height:1.5}
+.tag.dose-tag{background:#e3f0fa;color:var(–blue)}
 
-  .empty{text-align:center;color:var(--muted);padding:46px 20px;font-size:.92rem}
+mark{background:#fff3bf;color:inherit;border-radius:3px;padding:0 1px}
 
-  /* ---------- Legend / footer ---------- */
-  footer{max-width:920px;margin:8px auto 40px;padding:0 18px}
-  .legend{
-    background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
-    box-shadow:var(--shadow);overflow:hidden;
-  }
-  .legend summary{padding:14px 16px;font-weight:600;font-size:.88rem;align-items:center}
-  .legend .body{padding:4px 16px 16px;border-top:1px solid var(--line)}
-  .legend dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:.84rem}
-  .legend dt{font-weight:700;color:var(--teal-deep)}
-  .legend dd{margin:0;color:var(--muted)}
-  .legend .how{margin-top:16px;padding-top:14px;border-top:1px dashed var(--line);font-size:.84rem;color:var(--muted)}
-  .legend .how b{color:var(--ink)}
-  .legend code{background:var(--slate-soft);padding:1px 6px;border-radius:5px;font-size:.82em}
+.empty{text-align:center;color:var(–muted);padding:46px 20px;font-size:.92rem}
 
-  .disclaimer{font-size:.74rem;color:var(--muted);text-align:center;margin-top:16px;line-height:1.6}
+/* ––––– Legend / footer ––––– */
+footer{max-width:920px;margin:8px auto 40px;padding:0 18px}
+.legend{
+background:var(–surface);border:1px solid var(–line);border-radius:var(–radius);
+box-shadow:var(–shadow);overflow:hidden;
+}
+.legend summary{padding:14px 16px;font-weight:600;font-size:.88rem;align-items:center}
+.legend .body{padding:4px 16px 16px;border-top:1px solid var(–line)}
+.legend dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:.84rem}
+.legend dt{font-weight:700;color:var(–teal-deep)}
+.legend dd{margin:0;color:var(–muted)}
+.legend .how{margin-top:16px;padding-top:14px;border-top:1px dashed var(–line);font-size:.84rem;color:var(–muted)}
+.legend .how b{color:var(–ink)}
+.legend code{background:var(–slate-soft);padding:1px 6px;border-radius:5px;font-size:.82em}
 
-  /* sheet selector */
-  .sheetsel{display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--muted)}
-  .sheetsel select{font:inherit;font-size:.84rem;padding:6px 9px;border-radius:9px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
+.disclaimer{font-size:.74rem;color:var(–muted);text-align:center;margin-top:16px;line-height:1.6}
 
-  @media (max-width:560px){
-    .masthead{padding-top:13px}
-    .count{width:100%;margin-left:0}
-  }
-  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+/* sheet selector */
+.sheetsel{display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(–muted)}
+.sheetsel select{font:inherit;font-size:.84rem;padding:6px 9px;border-radius:9px;border:1px solid var(–line);background:var(–surface);color:var(–ink)}
+
+@media (max-width:560px){
+.masthead{padding-top:13px}
+.count{width:100%;margin-left:0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
+
 </head>
 <body>
 <header>
@@ -183,22 +195,25 @@
       </div>
     </div>
 
-    <div class="searchrow">
-      <div class="search">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-        <input id="q" type="search" placeholder="Tìm theo tên thuốc hoặc hoạt chất…" autocomplete="off" spellcheck="false">
-      </div>
-      <button class="btn" id="uploadBtn">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M17 8l-5-5-5 5"/><path d="M12 3v12"/></svg>
-        Đổi file
-      </button>
-      <input id="file" type="file" accept=".xlsx,.xls" hidden>
-    </div>
+```
+<div class="searchrow">
+  <div class="search">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+    <input id="q" type="search" placeholder="Tìm theo tên thuốc hoặc hoạt chất…" autocomplete="off" spellcheck="false">
+  </div>
+  <button class="btn" id="uploadBtn">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M17 8l-5-5-5 5"/><path d="M12 3v12"/></svg>
+    Đổi file
+  </button>
+  <input id="file" type="file" accept=".xlsx,.xls" hidden>
+</div>
 
-    <div class="filters" id="filters" hidden>
-      <button class="chip" data-cat="all" aria-pressed="true">Tất cả</button>
-      <span class="count" id="count"></span>
-    </div>
+<div class="filters" id="filters" hidden>
+  <button class="chip" data-cat="all" aria-pressed="true">Tất cả</button>
+  <span class="count" id="count"></span>
+</div>
+```
+
   </div>
 </header>
 
@@ -237,14 +252,22 @@
     <div class="body">
       <dl>
         <dt>TB</dt><dd>Tiêm bắp</dd>
-        <dt>TTM</dt><dd>Tiêm tĩnh mạch</dd>
-        <dt>Tr.TM</dt><dd>Truyền tĩnh mạch</dd>
+        <dt>TTM</dt><dd>Truyền tĩnh mạch</dd>
         <dt>TMC</dt><dd>Tiêm tĩnh mạch chậm</dd>
+        <dt>TM</dt><dd>Tĩnh mạch</dd>
+        <dt>VMN</dt><dd>Viêm màng não</dd>
+        <dt>eGFR</dt><dd>Độ lọc cầu thận ước tính (mL/min)</dd>
+        <dt>CRRT</dt><dd>Lọc máu liên tục</dd>
+        <dt>CVVH / CVVHDF</dt><dd>Các phương thức lọc máu liên tục</dd>
+        <dt>CTNT</dt><dd>Chạy thận nhân tạo ngắt quãng</dd>
+        <dt>TBW</dt><dd>Cân nặng thực tế</dd>
+        <dt>EBW</dt><dd>Cân nặng lý tưởng</dd>
+        <dt>ABW</dt><dd>Cân nặng hiệu chỉnh</dd>
+        <dt>MUI</dt><dd>Triệu đơn vị (Colistin: 1 MUI = 34 mg base)</dd>
         <dt>DTQG</dt><dd>Dược thư Quốc gia</dd>
-        <dt>NSX</dt><dd>Nhà sản xuất</dd>
       </dl>
       <div class="how">
-        <b>Dữ liệu lấy trực tiếp từ Google Sheets của khoa dược.</b> Khi khoa dược chỉnh sửa bảng tính, trang web sẽ hiển thị bản mới sau ít phút — không ai cần tải file lên. Bấm <b>Tải lại</b> để lấy ngay bản mới nhất. Để trang đọc được, bảng tính phải ở chế độ chia sẻ <b>“Bất kỳ ai có đường liên kết → Người xem”</b>. Nếu tạm thời không có mạng tới Google, trang sẽ tự dùng file <code>data.xlsx</code> đặt cạnh (nếu có), hoặc bạn bấm <b>Đổi file</b> để nạp thủ công.
+        <b>Dữ liệu lấy trực tiếp từ Google Sheets của khoa dược.</b> Tab <b>RAW</b> cung cấp phần pha &amp; bảo quản; tab <b>“Liều”</b> cung cấp phần liều dùng. Khi khoa dược chỉnh sửa bảng tính, trang sẽ hiển thị bản mới sau ít phút — bấm <b>Tải lại</b> để cập nhật ngay. Để trang đọc được, bảng tính phải ở chế độ chia sẻ <b>“Bất kỳ ai có đường liên kết → Người xem”</b>. Nếu chưa có tab “Liều”, trang dùng bộ liều nhúng sẵn. Khi mất mạng tới Google, trang tự dùng file <code>data.xlsx</code> đặt cạnh (nếu có) hoặc bấm <b>Đổi file</b> để nạp thủ công.
       </div>
     </div>
   </details>
@@ -254,18 +277,25 @@
 <script>
 /* ===== NGUỒN DỮ LIỆU ===== */
 /* Đọc trực tiếp từ Google Sheets của khoa dược.
-   - id : mã bảng tính (đoạn giữa /d/ và /edit trong link)
-   - gids : danh sách tab cần đọc (số sau gid= trong link của từng tab).
-            Muốn thêm tab, thêm mã gid vào mảng, ví dụ: ['194306598','0'] */
+   - id     : mã bảng tính (đoạn giữa /d/ và /edit trong link)
+   - sources: danh sách tab cần đọc. Mỗi tab ghi theo TÊN: { sheet:'RAW' }
+              hoặc theo mã gid: { gid:'194306598' }.
+              Thêm tab thì thêm phần tử, ví dụ: [{sheet:'RAW'},{sheet:'Thuoc khong SD'}] */
 const GSHEET = {
   id: '1DO8R4PXVcGI3emc9l1DNpZ3u7Q_PRQefJtBusTJ7IAc',
-  gids: ['194306598'],
+  sources: [ { sheet: 'RAW' } ],
+  // Nguồn liều dùng — có thể là tab trong cùng file, hoặc một file Google Sheets riêng:
+  dose: { id: '1anCNXIAlI_8WRK5hZWTywTBc1fNA_qOt', sheet: 'Liều', firstTab: true },
   label: 'Khoa dược'
 };
 const CANDIDATES = ['data.xlsx','thuoc.xlsx']; // file Excel dự phòng đặt cạnh trang
 let RECORDS = [];      // all parsed records
 let SHEETS = [];       // distinct sheet names with data
 let state = { q:'', cat:'all', sheet:'all' };
+
+/* ===== LIỀU DÙNG (bản nhúng sẵn — dùng làm dự phòng nếu chưa có tab "Liều") ===== */
+let DOSING = [{"k": ["avibactam"],"name": "Ceftazidime/Avibactam","dose": "3 – 6 tháng: 120 mg/kg/ng chia 3 lần/ng (TTM, TB)\n≥ 6 tháng: 150 mg/kg/ng chia 3 lần/ng (TTM, TB)\nLiều tối đa: 2 g/liều.","gfr": "50-31 mL/min: 25 mg/kg/liều mỗi 8h. Tối đa 1\ng/liều\n30-16 mL/min: 19 mg/kg/liều mỗi 12h. Tối đa\n750 mg/liều\n15-6 mL/min: 19 mg/kg/liều mỗi 24h. Tối đa 750\nmg/liều\n<5 mL/min: 19 mg/kg/liều mỗi 48h. Tối\nđa 750 mg/liều","crrt": "","note": "Béo phì dùng CN: TBW\nTruyền tĩnh mạch nếu\nliều > 1g/lần","mon": ""},{"k": ["acyclovir"],"name": "Acyclovir","dose": "30-45 mg/kg/ng chia 3 lần/ng (TTM)\nMax: 1500 mg/m2/ng hoặc 45 mg/kg/ng","gfr": "50-25 mL/min: 100% liều mỗi 12h\n25-10 mL/min: 100% liều mỗi 24h\n<10 mL/min: 50% liều mỗi 24h","crrt": "CVVH: 5-10 mg/kg/liều mỗi 24h\nCVVHD/CVVHDF: 5-10 mg/kg/12-24h","note": "Béo phì dùng CN:\nEBW","mon": ""},{"k": ["amikacin"],"name": "Amikacin","dose": "15-22.5 mg/kg/ng chia 1 lần/ng (TTM, TB)\nTối đa: 1,5 g/ng","gfr": "Điều chỉnh dựa trên nồng độ thuốc trong huyết\ntương và mức độ suy thận của bệnh nhân","crrt": "","note": "Béo phì dùng CN:\n0.7xTBW","mon": ""},{"k": ["amphotericin"],"name": "Amphotericin B","dose": "Test: 0.1 mg/kg (tối đa 1mg) (TTM trong 30-60ph)\nKhởi đầu: 0.25 mg/kg/ng (TTM trong 3-4h)\nDuy trì: tăng dần 0.25 mg/kg/ng đến khi đạt được liều\n1-1.5 mg/kg/ng\nLiều tối đa: 1,5 mg/kg/ng","gfr": "Giảm 50% liều hoặc dùng cách ngày","crrt": "","note": "Pha thuốc với glucose\n5% nồng độ 100 ug/ml","mon": ""},{"k": ["caspofungin"],"name": "Caspofungin","dose": "Sơ sinh - < 3 tháng : 25 mg/m2/ng (TTM)\n3 tháng – 18 tuổi : Liều tải 70 mg/m2/ng 1 cử x 1 ngày, sau đó\n50 mg/m2/ng (TTM)\nTối đa: 150mg/ng","gfr": "Không điều chỉnh","crrt": "Không điều chỉnh","note": "Béo phì dùng CN: TBW","mon": ""},{"k": ["cefepim"],"name": "Cefepime","dose": "100-150 mg/kg/ng chia 2-3 lần/ng (TMC, TB)\nTối đa: 2g/liều, 6g/ng","gfr": "60-30 mL/min: 50 mg/kg/q12 – 24h. Tối đa 2 g/liều\n29-11 mL/min: 25 – 50 mg/kg/24h. Tối đa x 2 g/liều\n< 11 mL/min: 25 – 50 mg/kg/24h. Tối đa 1g/liều","crrt": "50% liều mỗi 24h","note": "Béo phì dùng CN: TBW","mon": ""},{"k": ["cefotaxim"],"name": "Cefotaxime","dose": "150-200 mg/kg/ng chia 3-4 lần/ng (TMC, TB)\nVMN: 225-300 mg/kg/ng chia 3-4 lần/ng (TMC, TB)\nTối đa: 3g/liều, 12g/ng","gfr": "50-30 mL/min: 35-70 mg/kg/liều mỗi 8-12h\n29-10 mL/min: 35-70mg/kg/liều mỗi 12h\n<10 mL/min: 35-70 mg/kg/liều mỗi 24h","crrt": "CVVH: 25-50 mg/kg/liều mỗi 8-12h\nCVVHDF: 25-50 mg/kg/liều mỗi 6h","note": "Béo phì dùng CN: TBW","mon": ""},{"k": ["cefoperazon"],"name": "Cefoperazone","dose": "50 – 100 mg/kg/ng chia 2 lần/ng (TMC, TB)\nNhiễm khuẩn nặng:200 mg/kg/ng chia 4-6 lần/ng (TMC, TB)","gfr": "","crrt": "","note": "Béo phì dùng CN: TBW","mon": ""},{"k": ["ceftazidim"],"name": "Ceftazidime","dose": "90-150 mg/kg/ng chia 3 lần/ng. Tối đa: 6g/ng (TMC,TB)\nTrẻ béo phì: tối đa 8 g/ng\nNhiễm trùng nặng do Pseudomonas: 200-300 mg/kg/ng\n(TMC,TB) chia 3 lần/ng. Tối đa: 12g/ng","gfr": "50-30 mL/min: 50 mg/kg/liều mỗi 12h\n29-10 mL/min: 50 mg/kg/liều mỗi 24h\n<10 mL/min: 50 mg/kg/liều mỗi 48h","crrt": "50mg/kg/liều q12h","note": "Béo phì dùng CN: TBW","mon": ""},{"k": ["ceftriaxon"],"name": "Ceftriaxone","dose": "50-100 mg/kg/ng chia 1-2 lần/ng (TMC, TB). Tối đa 2 g/liều","gfr": "Không hiệu chỉnh","crrt": "Không hiệu chỉnh","note": "Suy gan +suy thận\nnặng không dùng >\n2g/ng","mon": ""},{"k": ["cefuroxim"],"name": "Cefuroxime","dose": "75-100 mg/kg/ng chia 3 lần/ng (TMC, TB)\nNhiễm trùng nặng:100-200 mg/kg/ng chia 3-4 lần/ng(TMC,TB)\nLiều tối đa: 1500 mg/liều","gfr": "20-10 mL/min: 100% liều mỗi 12h/cử\n<10 mL/min: 100% liều mỗi 24h/cử","crrt": "100% liều mỗi 24h","note": "Béo phì dùng CN: TBW","mon": ""},{"k": ["ciprofloxacin"],"name": "Ciprofloxacin","dose": "20-30 mg/kg/ng chia 2-3 lần/ng (TTM)\nTối đa 400 mg/liều; 1200 mg/ng","gfr": "29-10 mL/min: 100% liều mỗi 18h\n<10 mL/min: 100% liều mỗi 24h","crrt": "","note": "Béo phì dùng CN:\nEBW+0.45(TBW-EBW)","mon": ""},{"k": ["clindamycin"],"name": "Clindamycin","dose": "20-40 mg/kg/ng chia 3-4 lần/ng (TB, TTM)\nTối đa: 2,7 g/ng","gfr": "Không hiệu chỉnh","crrt": "Không hiệu chỉnh","note": "Béo phì dùng CN: TBW\nKhông nên tiêm bắp\nquá 600 mg/lần","mon": ""},{"k": ["colistin","colistimethat"],"name": "Colistin","dose": "TTM: 2,5 – 5 mg base /kg/ng chia 2-4 lần/ng\nKhí dung:\n< 2 tuổi: 34 – 68 mg/ng chia 2 lần/ng. Max: 68 mg/ng\n≥ 2 tuổi: 68 – 136 mg/ng chia 2-3 lần/ng. Max: 200mg/ng","gfr": "50 – 70 mL/min: 2,5 – 3,8 mg/kg/ng chia mỗi\n12h\n30 – 49 mL/min: 2,5 mg/kg/ng chia mỗi 12-24h\n<30 mL/min: 1,5 mg/kg/ng chia mỗi 36h","crrt": "100% liều mỗi 24h","note": "","mon": ""},{"k": ["fluconazol"],"name": "Fluconazole","dose": "6-12 mg/kg/ng chia 1 lần/ng (TTM). Tối đa: 600mg/ng\nNhiễm trùng thần kinh trung ương: 1000 mg/ng (TTM)","gfr": "50-10 mL/min: 50% liều mỗi 24h\n<10 mL/min: 50% liều mỗi 48h","crrt": "100% sau mỗi chu kỳ lọc","note": "Béo phì dùng CN: TBW","mon": ""},{"k": ["gentamicin"],"name": "Gentamicin","dose": "3-7.5 mg/kg/ng chia 1 lần/ng (TTM,TB)","gfr": "50-30 mL/min: 2.5 mg/kg/liều mỗi 12h\n29-10 mL/min: 2.5 mg/kg/liều mỗi 24h\n<10 mL/min: 2.5 mg/kg/liều mỗi 48-72h","crrt": "2-2.5 mg/kg/liều mỗi 24h","note": "Béo phì dùng CN:\n0.7xTBW","mon": ""},{"k": ["imipenem"],"name": "Imipenem/Cilastatin","dose": "60-100 mg/kg/ng chia 4 lần/ng (TTM)\nTối đa: 4 g/ng","gfr": "89-60 mL/min: 75-80%liều mỗi 6-8h\n59-30 mL/min: 50-60% liều mỗi 6h\n29-10 mL/min: 40-50% liều mỗi 6-12h\n<10 mL/min: 50% liều mỗi 24h","crrt": "50% liều mỗi 24h","note": "","mon": ""},{"k": ["levofloxacin"],"name": "Levofloxacin","dose": "< 5 tuổi: 16-20 mg/kg/ng chia 2 lần/ng (TTM)\n≥ 5 tuổi: 8-10 mg/kg/ng chia 1 lần/ng (TTM)\nTối đa: 500-750 mg/ng","gfr": "29-10 mL/min: 100% liều mỗi 24h\n<10 mL/min: 100% liều mỗi 48h","crrt": "100% liều mỗi 48h","note": "Béo phì dùng CN:\nEBW+0.45(TBW-EBW)","mon": ""},{"k": ["linezolid"],"name": "Linezolid","dose": "TE <12 tuổi: 30 mg/kg/ng chia 3 lần/ng (TTM)\nTối đa 600 mg/liều\nTE >= 12 tuổi: 1200 mg/ng chia 2 lần/ng (TTM)","gfr": "","crrt": "Không hiệu chỉnh","note": "Béo phì dùng CN: TBW","mon": ""},{"k": ["meropenem"],"name": "Meropenem","dose": "60 mg/kg/ng chia 3 lần/ng (TM,TTM). Tối đa 3g/ng\nVMN: 120 mg/kg/ng chia 3 lần/ng (TM,TTM)\nTối đa: 3g/ng","gfr": "50-30 mL/min: 100% liều mỗi 12h\n29-10 mL/min: 50% liều mỗi 12h\n<10 mL/min: 50% liều mỗi 24h","crrt": "","note": "Béo phì dùng CN: TBW","mon": ""},{"k": ["metronidazol"],"name": "Metronidazole","dose": "22.5-40 mg/kg/ng chia 3-4 lần/ng (TTM)\nTối đa: 4 g/ng","gfr": "<10 mL/min: 4 mg/kg/liều mỗi 6h","crrt": "Không hiệu chỉnh","note": "Suy gan nặng (Child C)\ngiảm tổng liều 50%\nBéo phì dùng CN: TBW","mon": ""},{"k": ["piperacillin","tazobactam"],"name": "Piperacillin/Tazobactam","dose": "< 40 kg: 240-300 mg/kg/ng chia 3-4 lần/ng (TM,TTM,TB)\nTối đa 16 g/ng\n>40 kg: 8-12g/ng","gfr": "50-30 mL/min: 35-50 mg/kg/liều mỗi 6h\n<30 mL/min: 35-50 mg/kg/liều mỗi 8h","crrt": "35-50 mg/kg/liều mỗi 8h","note": "Béo phì dùng CN: TBW","mon": ""},{"k": ["ticarcillin"],"name": "Ticarcillin/Clavulanic","dose": "200 mg/kg/ng chia 4 lần/ng (TTM)\nNhiễm trùng nặng: 300 mg/kg/ng chia 4-6 lần/ng (TTM)\nTối đa 3,1 g/liều, 300 mg/kg/ng","gfr": "Liều khởi đầu: 50 mg/kg sau đó điều chỉnh\nchức năng thận\n30-10 mL/min : 25 - 50 mg/kg mỗi 8h\n< 10 mL/min: 25 - 50 mg/kg mỗi 12h\n< 10 mL/min+SG: 25 - 50 mg/kg mỗi 24h","crrt": "CTNT: 25 - 50 mg/kg/liều/12h, bổ sung\nmột liều sau chạy thận:50 mg/kg\nCVVH: Liều 50 mg/kg/liều/8h","note": "","mon": ""},{"k": ["trimethoprim","sulfamethoxazol","cotrimoxazol","co-trimoxazol","bactrim"],"name": "Trimethoprim/Sulfamethoxazole","dose": "15-20 mg/kg/ng chia 4 lần/ng (Uống)\n8-12 mg/kg/ng chia 2-4 lần/ng (TM)","gfr": "40-20 mL/min: 70% liều mỗi 6h\n<20 mL/min: 50% liều mỗi 6h","crrt": "50% liều mỗi 8h","note": "Béo phì: dùng TBW","mon": ""},{"k": ["vancomycin"],"name": "Vancomycin","dose": "TE 3th đến <12 tuổi: 60-80 mg/kg/ng chia 4 lần/ng (TTM)\nTE ≥ 12 tuổi: 60-70 mg/kg/ng chia chia 3-4 lần/ng (TTM)\nLiều nạp 20 mg/kg ở trẻ béo phì\nLiều tối đa: 3.600 mg/ng","gfr": "50-30 mL/min : 10 mg/kg/liều mỗi 12h\n29-10 mL/min : 10 mg/kg/liều mỗi 18 đến 24h\n<10 mL/min : 10 mg/kg/liều, định lượng lại dựa\ntrên nồng độ trong huyết thanh","crrt": "","note": "Béo phì: dùng TBW","mon": "Theo dõi nồng độ đáy (trough), mục tiêu 10–15 mg/L:\nMục tiêu 10-15mg/L\n<5: tăng 20% liều và định lượng trough trước liều mới thứ 4\n5-10: tăng 15% liều và định lượng trough trước liều mới thứ 4\n10-15 giữ nguyên và định lượng trough sau 72g\n15-20: giảm 15-20% hoặc giảm khoảng cách liều. Định lượng trough trước liều mới thứ 4\n20-25: Ngưng liều tiếp theo và định lượng trough sau 6-8g. Nếu trough <15 bắt đầu lại với liều thấp hơn 20-25% hoặc giảm khoảng cách liều. Nếu trough >15 tiếp tục ngưng, định lượng trough sau 6g\n>25: Ngưng và định lượng trough sau 12g. Nếu trough <15 bắt đầu lại với liều thấp hơn 50% hoặc giảm khoảng cách liều và định lượng trough trước liều tiếp theo. Nếu trough >15 tiếp tục ngưng, định\nlượng trough sau 6g"}];
+function findDosing(rec){ const s=norm((rec.name||'')+' '+(rec.ingredient||'')); for(const d of DOSING){ if(d.k.some(k=>s.includes(k))) return d; } return null; }
 
 const $ = s => document.querySelector(s);
 const norm = s => (s||'').toString().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/đ/g,'d').trim();
@@ -318,6 +348,13 @@ function parseRows(rows, sheetName){ // detect header row by content, extract re
   }
   return recs;
 }
+function appendDosingOnly(){
+  const present=new Set();
+  RECORDS.forEach(r=>{ const d=findDosing(r); if(d) present.add(d.name); });
+  DOSING.forEach(d=>{ if(!present.has(d.name))
+    RECORDS.push({sheet:'Liều dùng', name:d.name, ingredient:'', form:'', prep:'', storage:'', note:'', category:'', date:null, _doseOnly:true});
+  });
+}
 function ingest(sources){ // sources: [{name, rows}]
   let all=[]; const names=[];
   sources.forEach(({name,rows})=>{
@@ -325,6 +362,7 @@ function ingest(sources){ // sources: [{name, rows}]
     if(recs.length>=MIN_ROWS){ all=all.concat(dedup(recs)); names.push(name); }
   });
   RECORDS=all; SHEETS=names; state.sheet='all';
+  if(all.length) appendDosingOnly();
   return all.length;
 }
 function workbookToSources(wb){
@@ -399,6 +437,18 @@ function render(){
   list.innerHTML=filtered.map(r=>{
     const cc=catClass(r.category);
     const sheetTag = SHEETS.length>1 ? `<span class="tag">${esc(r.sheet)}</span>` : '';
+    const d=findDosing(r);
+    const doseTag = d ? `<span class="tag dose-tag">có liều dùng</span>` : '';
+    const dblock=(title,txt,cls)=> txt?`<div class="block dose ${cls||''}"><h4>${title}</h4><div class="txt">${esc(txt)}</div></div>`:'';
+    const doseHTML = d ? `<div class="dosegroup">
+        <div class="dosehead">Liều dùng — tham khảo</div>
+        ${dblock('Liều thường dùng', d.dose)}
+        ${dblock('Chỉnh liều theo eGFR', d.gfr)}
+        ${dblock('Liều khi lọc máu liên tục (CRRT)', d.crrt)}
+        ${dblock('Theo dõi nồng độ', d.mon)}
+        ${dblock('Lưu ý liều', d.note)}
+        <div class="src">Liều tham khảo theo phác đồ kháng sinh nhi: Nelson 2022, Micromedex, UpToDate, Stanford 2023, Dược thư QG 2023, Harriet Lane 23rd. Luôn cân nhắc cân nặng, chức năng gan–thận và đối chiếu phác đồ khoa.</div>
+      </div>` : '';
     return `<details class="card">
       <summary>
         <div class="sumtext">
@@ -407,16 +457,19 @@ function render(){
           <div class="tagrow">
             ${r.category?`<span class="tag ${cc}">${esc(r.category)}</span>`:''}
             ${r.form?`<span class="tag form">${esc(r.form)}</span>`:''}
+            ${doseTag}
             ${sheetTag}
           </div>
         </div>
         <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
       </summary>
       <div class="body">
-        <div class="block prep">
-          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v2l-3 4 3 4v2H9v-2l3-4-3-4z" transform="translate(0 0)"/><path d="M7 21h10"/><path d="M12 13v8"/></svg>Hướng dẫn pha – cách dùng</h3>
+        ${doseHTML}
+        ${r.prep?`<div class="block prep">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v2l-3 4 3 4v2H9v-2l3-4-3-4z"/><path d="M7 21h10"/><path d="M12 13v8"/></svg>Hướng dẫn pha – cách dùng</h3>
           <div class="txt">${esc(r.prep)}</div>
-        </div>
+        </div>`:''}
+        ${(!r.prep && r._doseOnly)?`<div class="src" style="padding-top:0">Chưa có trong danh mục pha của khoa dược — chỉ hiển thị liều tham khảo.</div>`:''}
         ${r.storage?`<div class="block storage">
           <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Bảo quản sau khi pha</h3>
           <div class="txt">${esc(r.storage)}</div>
@@ -457,15 +510,25 @@ function readFile(file){
 }
 
 /* ---- Google Sheets (live) ---- */
-function csvUrls(gid){
-  const b='https://docs.google.com/spreadsheets/d/'+GSHEET.id, t=Date.now();
-  return [
-    b+'/export?format=csv&gid='+gid+'&_='+t,           // exact CSV, when CORS allows
-    b+'/gviz/tq?tqx=out:csv&gid='+gid+'&_='+t           // CORS-friendly fallback
-  ];
+function csvUrls(src){
+  const id = src.id || GSHEET.id;
+  const b='https://docs.google.com/spreadsheets/d/'+id, t=Date.now();
+  const urls=[];
+  if(src.gid!=null){
+    urls.push(b+'/export?format=csv&gid='+src.gid+'&_='+t);        // exact CSV
+    urls.push(b+'/gviz/tq?tqx=out:csv&gid='+src.gid+'&_='+t);      // CORS-friendly
+  }
+  if(src.sheet){
+    urls.push(b+'/gviz/tq?tqx=out:csv&sheet='+encodeURIComponent(src.sheet)+'&_='+t);
+  }
+  if(src.firstTab){                                                // dự phòng: trang đầu tiên
+    urls.push(b+'/export?format=csv&_='+t);
+    urls.push(b+'/gviz/tq?tqx=out:csv&_='+t);
+  }
+  return urls;
 }
-async function fetchCsv(gid){
-  for(const u of csvUrls(gid)){
+async function fetchCsv(src){
+  for(const u of csvUrls(src)){
     try{
       const r=await fetch(u,{cache:'no-store'});
       if(r.ok){ const t=await r.text(); if(t && !/^\s*<(!doctype|html)/i.test(t)) return t; }
@@ -474,14 +537,15 @@ async function fetchCsv(gid){
   return null;
 }
 async function loadFromGoogle(){
-  const sources=[];
-  for(let i=0;i<GSHEET.gids.length;i++){
-    const csv=await fetchCsv(GSHEET.gids[i]);
+  const out=[];
+  for(let i=0;i<GSHEET.sources.length;i++){
+    const src=GSHEET.sources[i];
+    const csv=await fetchCsv(src);
     if(!csv) continue;
-    const nm=GSHEET.gids.length>1 ? GSHEET.label+' '+(i+1) : GSHEET.label;
-    sources.push({name:nm, rows:csvToRows(csv)});
+    const nm = src.sheet || GSHEET.label+(GSHEET.sources.length>1?' '+(i+1):'');
+    out.push({name:nm, rows:csvToRows(csv)});
   }
-  if(sources.length && ingest(sources)){ showApp(); return true; }
+  if(out.length && ingest(out)){ showApp(); return true; }
   return false;
 }
 
@@ -497,9 +561,47 @@ async function loadLocal(){
   return false;
 }
 
+/* ---- dosing tab (live) — overrides the embedded fallback when available ---- */
+function parseDoseRows(rows){
+  const HD={
+    key:['hoat chat khop','tu khoa','khop','match'],
+    name:['ten hien thi','ten thuoc','ten','hoat chat'],
+    dose:['lieu thuong','lieu dung','lieu luong'],
+    gfr:['gfr'], crrt:['crrt','loc mau'],
+    mon:['theo doi','nong do','trough'], note:['luu y']
+  };
+  const mc=cell=>{const n=norm(cell);for(const k in HD)if(HD[k].some(x=>n.includes(x)))return k;return null;};
+  let hi=-1,map={};
+  for(let i=0;i<Math.min(rows.length,8);i++){
+    const t={}; (rows[i]||[]).forEach((c,j)=>{const k=mc(c);if(k&&t[k]===undefined)t[k]=j;});
+    if(t.name!==undefined && t.dose!==undefined){ hi=i; map=t; break; }
+  }
+  if(hi<0) return [];
+  const out=[];
+  for(let i=hi+1;i<rows.length;i++){
+    const r=rows[i]; if(!r) continue;
+    const g=k=> map[k]!==undefined ? (r[map[k]]??'').toString().trim() : '';
+    const name=g('name'), dose=g('dose'); if(!name||!dose) continue;
+    const keyRaw=g('key');
+    const k = keyRaw ? keyRaw.split(/[;,]/).map(s=>norm(s)).filter(Boolean) : [norm(name.split('/')[0])];
+    out.push({k, name, dose, gfr:g('gfr'), crrt:g('crrt'), mon:g('mon'), note:g('note')});
+  }
+  return out;
+}
+async function loadDoseSheet(){
+  if(!GSHEET.dose) return;
+  try{
+    const csv=await fetchCsv(GSHEET.dose);
+    if(!csv) return;                       // chưa đọc được → giữ bản nhúng sẵn
+    const parsed=parseDoseRows(csvToRows(csv));
+    if(parsed.length) DOSING=parsed;       // ưu tiên dữ liệu sống
+  }catch(e){/* giữ bản nhúng sẵn */}
+}
+
 async function init(){
   const h=$('#welcome').querySelector('h2');
   h.textContent='Đang tải dữ liệu từ Google Sheets…';
+  await loadDoseSheet();                    // nạp liều trước
   if(await loadFromGoogle()) return;
   if(await loadLocal()) return;
   h.textContent='Chưa đọc được dữ liệu';
@@ -520,7 +622,7 @@ $('#chooseBtn').addEventListener('click',()=>$('#file').click());
 $('#file').addEventListener('change',e=>{if(e.target.files[0])readFile(e.target.files[0]);});
 $('#reload').addEventListener('click',async()=>{
   const b=$('#reload'); b.disabled=true; const old=b.innerHTML; b.innerHTML='Đang tải…';
-  await loadFromGoogle(); b.disabled=false; b.innerHTML=old;
+  await loadDoseSheet(); await loadFromGoogle(); b.disabled=false; b.innerHTML=old;
 });
 
 const drop=$('#welcome');
@@ -530,5 +632,6 @@ drop.addEventListener('drop',e=>{const f=e.dataTransfer.files[0];if(f)readFile(f
 
 init();
 </script>
+
 </body>
 </html>
